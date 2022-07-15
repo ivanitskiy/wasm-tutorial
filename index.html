@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>hello-wasm example</title>
+  </head>
+  <body>
+
+    <button onclick="myFunction()">Click to increment </button>
+    <p id="demo">1</p>
+
+    <script type="module">
+      import init, {sum} from "./pkg/wasm_tutorial.js";
+      init().then(() => {
+          myFunction = function () {
+            sumr = sum(1,sumr);
+            console.log("result is ", sumr);
+            document.getElementById("demo").innerHTML = sumr;
+          }
+        });
+    </script>
+
+    <script>
+        var sumr = 1;
+        var myFunction;
+        if (sumr === 1 ){
+          myFunction = myFunctionDeault;
+        }
+        function myFunctionDeault() {
+            document.getElementById("demo").innerHTML = sumr;
+        }
+    </script>
+  </body>
+</html>

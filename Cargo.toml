@@ -1,0 +1,15 @@
+[package]
+name = "wasm-tutorial"
+version = "0.1.0"
+edition = "2021"
+authors = ["Maxim Ivanitskiy <ivanitskiy@gmail.com>"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+
+[dependencies]
+wasm-bindgen = "0.2.81"
+web-sys = { version = "0.3.58", features = ["console"] }
