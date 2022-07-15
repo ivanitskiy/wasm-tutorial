@@ -50,10 +50,10 @@ index.html
   </head>
   <body>
     <script type="module">
-      import init, {greet} from "./pkg/hello_wasm.js";
+      import init, {sum} from "./pkg/wasm_tutorial.js";
       init()
         .then(() => {
-          greet("WebAssembly")
+          sum(2,2)
         });
     </script>
   </body>
